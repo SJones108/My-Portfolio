@@ -1,0 +1,196 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url('../images/bg.jpg');
+    background-size: cover;  
+}
+
+.hero {
+    font-family: "Dancing Script", cursive;
+    font-weight: 400;
+    font-size: 80px;
+}
+
+.text-center, .center {
+    text-align: center;
+}
+
+.container, .custom-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 400px;
+    border-radius: 8px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.card-img-top {
+    border-radius: 8px 8px 0 0;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.btn-primary {
+    width: 100%;
+    text-align: center;
+    margin-top: auto;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.row {
+    margin: 0;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch; /* Ensure columns stretch to fill the container */
+    height: 100%; /* Make sure columns stretch to full height of the container */
+}
+
+/* Styling for each feature card */
+.feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    margin: 0;
+    background-color: #fff; /* Background color for visibility */
+    border-radius: 0.5rem; /* Optional: Add rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better visual separation */
+    flex: 1; /* Allow the card to grow and shrink as needed */
+    /* Ensure each card stretches to fit the column height */
+}
+
+/* Ensure the link is at the bottom of the card */
+.icon-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #007bff; /* Adjust color as needed */
+    font-size: 1rem;
+    margin-top: auto; /* Pushes the link to the bottom of the flex container */
+    padding: 0.5rem 1rem; /* Padding for the link */
+}
+
+hr {
+    border: dotted #001313ec 4px;
+    border-bottom: none;
+    width: 20%;
+    margin: 100px auto;
+}
+
+
+.about-me {
+    width: 50%;
+    margin: 100px auto 100px auto;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    text-align: center;
+    line-height: 2;
+  }
+  
+  .about-me p {
+    font-size: large;
+  }
+  .about1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    margin-bottom: 60px;
+    border-radius: 25px;
+    overflow: hidden; 
+}
+
+.about-row {
+    padding-top: 60px; /* Apply padding here */
+}
+
+.about1 p {
+    padding-top: 50px;
+}
+
+.hobby-container {
+    width: 50%;
+    margin: 100px auto;
+    padding: 40px;
+    text-align: center;
+  }
+
+.hobbies h2 {
+    padding-bottom: 40px;
+}
+  
+.hobbies {
+    margin-bottom: 60px;
+  }
+
+  .hobbies p {
+    padding-top: 20px;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 80%;
+    text-align: center; 
+    font-size: large;
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 24px;
+    cursor: pointer;
+    display: none; /* Hidden by default */
+    z-index: 1000;
+    text-decoration: none;
+}
+
+.scroll-to-top:hover {
+    background-color: #555;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: larger;
+}
+
+footer .col-md-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .nav {
+    justify-content: center;
+}
