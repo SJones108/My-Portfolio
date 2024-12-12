@@ -35,31 +35,49 @@
     </nav>
 
           <!-- Contact Section -->
-          <div class="about-me">
-            <h2>Contact Me</h2>
-            <div class="about-row">
-              <img class="about1" src="images/contact-me.jpg" alt="May 10th, 2003 F5 Tornado in Tazewell County, Illinois" />
-              <div class="form-style">
-                <form action="">
-                    <label for="">Name:</label><br>
-                    <input type="text" id="name" placeholder="Name..."><br>
-                    <label for="">Email:</label><br>
-                    <input type="text" id="name" placeholder="Email..."><br>
-                    <label for="">Phone:</label><br>
-                    <input type="text" id="name" placeholder="Phone..."><br>
-                    <label for="">Message:</label><br>
-                    <textarea name="message" id="message" cols="40" rows="5"></textarea><br>
-                    <p>How would you like me to respond?</p>
-                    <input type="radio" id="emailradio" value="Email">
-                    <label for="email">Email</label>
-                    <input type="radio" id="phoneradio" value="Phone">
-                    <label for="Phone">Phone</label><br>
-                    <br />
-                    <button style="width: 20%; padding: 10px; border: none; border-radius: 5px; background-color: #007bff; color: white; cursor: pointer; font-size: 16px;">Submit</button>
-                </form>
-                </div>
-            </div>
-          </div>
+        <div class="row">
+                <div class="col-lg-7">	
+                    <div class="contact">
+                        <form class="form" name="enq" method="post" action="contact.php" onsubmit="return validation();">
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <input type="text" name="name" class="form-control" placeholder="Name" required="required">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <input type="email" name="email" class="form-control" placeholder="Email" required="required">
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <input type="text" name="subject" class="form-control" placeholder="Subject" required="required">
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <textarea rows="6" name="message" class="form-control" placeholder="Your Message" required="required"></textarea>
+                                </div>
+                                <div class="col-md-12 text-center">
+                                    <button type="button" value="Send message" name="submit" id="submitButton" class="btn btn-contact-bg" title="Submit Your Message!" onclick="sendMail();">
+                                        Send Message
+                                    </button>
+                                    <!-- Place the sendMail function after the button -->
+                                    <script>
+                                        function sendMail() {
+                                             var name = document.getElementsByName("name")[0].value;
+                                            var email = document.getElementsByName("email")[0].value;
+                                            var subject = document.getElementsByName("subject")[0].value;
+                                            var message = document.getElementsByName("message")[0].value;
+
+                                            var mailtoLink = 'mailto:skjones4868@yahoo.com' +
+                                            '?subject=' + encodeURIComponent(subject) +
+                                            '&body=' + encodeURIComponent('Name: ' + name + '\n' +
+                                            'Email: ' + email + '\n' +
+                                            'Message: ' + message);
+
+                                            window.location.href = mailtoLink;
+                                        }
+                                    </script>
+                               </div>
+                            </div>
+                        </form>
+                    </div>
+                </div><!--- END COL --> 
           <hr />
 
             
